@@ -10,11 +10,11 @@
 # How we calculate this path ? Dynamic Programming -->> Path from i to j can be from any of the k vertices where 1<=k<=n
 # For detailed logic behind dynamic programming formula, refer to CLRS page  687
 # Example path from vertex 3 to vertex 5 having atmost 3 edges can be found by calculating path from 
-# vertex 3 to vertex 1 having atmost 2 edges + weight of edge 1 to 5
-# vertex 3 to vertex 2 having atmost 2 edges + weight of edge 2 to 5
-# vertex 3 to vertex 3 having atmost 2 edges + weight of edge 3 to 5
-# vertex 3 to vertex 4 having atmost 2 edges + weight of edge 4 to 5
-# vertex 3 to vertex 5 having atmost 2 edges + weight of edge 5 to 5
+# vertex 3(i) to vertex 1 (k) having atmost 2 edges + weight of edge 1 (k) to 5 (j)
+# vertex 3(i) to vertex 2 (k) having atmost 2 edges + weight of edge 2 (k) to 5 (j)
+# vertex 3(i) to vertex 3 (k) having atmost 2 edges + weight of edge 3 (k) to 5 (j)
+# vertex 3(i) to vertex 4 (k) having atmost 2 edges + weight of edge 4 (k) to 5 (j)
+# vertex 3(i) to vertex 5 (k) having atmost 2 edges + weight of edge 5 (k) to 5 (j)
 # and choosing minimum of all of the above which comes out to be 11. For detailed calculation refer to A4 practice sheet
 # Whenever Extend_Shortest_Paths() is called, we extend the shortes path by 1 edge. 
 # During 1st pass, we calculate path from i to j having  edge which is W matrix itself
